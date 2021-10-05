@@ -30,7 +30,7 @@ public class Main {
 
 			System.out.println("\n***데이터 추가 ***");
 			Statement stat2 = con.createStatement();
-			String sql2 = "insert into g_artists (name, a_type , a_year, debut, regdate)" + " values ('소녀시대', '여성', '2000년대', '2007년', datetime('now', 'localtime'));";
+			String sql2 = "insert into g_artists (name, a_type , a_year, debut, regdate)" + " values ('싸이', '남성', '1999년대', '2007년', datetime('now', 'localtime'));";
 			int cnt = stat2.executeUpdate(sql2);
 			if(cnt > 0)
 			{
@@ -42,7 +42,7 @@ public class Main {
 			
 			System.out.println("\n***데이터 수정***");
 			Statement stat3 = con.createStatement();
-			String sql3 = "update g_artists set a_year = '2000년대, 2010년대, 2020년대' " + "where id = 1 ;";
+			String sql3 = "update g_artists set a_year = '2000년대, 2010년대, 2020년대' " + "where id = 5 ;";
 			int cnt3 =stat3.executeUpdate(sql3);
 			if(cnt3 > 0)
 				System.out.println("데이터가 수정되었습니다!");
@@ -52,7 +52,7 @@ public class Main {
 			
 			System.out.println("\n***데이터 삭제***");
 			Statement stat4 = con.createStatement();
-			String sql4 = "delete from g_artists where id = 4 ;";
+			String sql4 = "delete from g_artists where id = 7 ;";
 			int cnt4 = stat4.executeUpdate(sql4);
 			if(cnt4 > 0)
 				System.out.println("데이터가 삭제되었습니다!");
